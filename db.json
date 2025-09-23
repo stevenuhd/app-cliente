@@ -1,0 +1,24 @@
+{
+  "clientes": [
+    {
+      "id": "6d1f",
+      "nombre": "esteban",
+      "apellido": "hola",
+      "email": "esteban_sk8_@hotmail.com",
+      "telefono": "222-222-2222",
+      "empresa": "hola",
+      "puesto": "hola",
+      "estado": 0
+    },
+    {
+      "id": "9894",
+      "nombre": "esteban2",
+      "apellido": "ss",
+      "email": "dddd@hotmail.com",
+      "telefono": "111-111-1111",
+      "empresa": "hola2",
+      "puesto": "hola2",
+      "estado": 1
+    }
+  ]
+}
