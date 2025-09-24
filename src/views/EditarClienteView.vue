@@ -42,7 +42,13 @@ defineProps({
 })
 
 const handleSubmit = (data) => {
-   
+   ClienteService.actualizarCliente(id, data)
+   .then(() => {
+       router.push({name: 'inicio'})
+   })
+   .catch((error) => {
+       console.log(error)
+   })
 }
 
 </script>
@@ -61,7 +67,7 @@ const handleSubmit = (data) => {
 
     <div class="bg-white shadow rounded-md max-w-3xl mx-auto p-4 mt-10">
         <div class="mx-auto md:w-2/3 py-20 px-6">
-            <FormKit type="form" submit-label="Editar Cliente"
+            <FormKit type="form" submit-label="Guardar Cambios"
                 incomplete-message="Por favor rellene todos los campos" @submit="handleSubmit" :value="formData">
                 <FormKit type="text" label="Nombre" name="nombre" placeholder="Nombre del Cliente" validation="required"
                     :validation-messages="{ required: 'El Nombre del Cliente es obligatorio' }" 

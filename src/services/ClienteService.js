@@ -1,17 +1,26 @@
 import api from "../lib/axios";
 
 export default {
-    getClientes() {
-        return api.get('/clientes')
-    },
+  getClientes() {
+    return api.get("/clientes");
+  },
 
-    agregarCliente(data) {
-        return api.post('/clientes', data)
-    },
+  agregarCliente(data) {
+    return api.post("/clientes", data);
+  },
 
-    obtenerCliente(id) {
-        return api.get(`/clientes/${id}`)
-    },
+  obtenerCliente(id) {
+    return api.get(`/clientes/${id}`);
+  },
+  actualizarCliente(id, data) {
+    return api.patch(`/clientes/${id}`, data);
+  },
 
+  cambiarEstado(id, data) {
+    return api.patch(`/clientes/${id}`, data);
+  },
 
-}
+  eliminarCliente(id) {
+    return api.delete(`/clientes/${id}`);
+  },
+};
